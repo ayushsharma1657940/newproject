@@ -48,6 +48,9 @@ class ModelTrainer:
                 "XGBRegressor": XGBRegressor(),
                 "CatBoostRegressor": CatBoostRegressor(verbose=False)
             }
+            
+            
+
             model_report:dict = evaluate_models(X_train, y_train, X_test, y_test, models)
             
             best_model_score= max(sorted(model_report.values()))
